@@ -123,7 +123,7 @@ const UserCtrl = {
       if (nvPassword !== confirmPassword)
         return res
           .status(302)
-          .json({ msg: "nvpassword et confirmPassword different" });
+          .json({ msg: "nvPassword et confirmPassword different" });
           let passwordHash = await bcrypt.hash(nvPassword,10)
           await user. findByIdAndUpdate({_id:id},{password:passwordHash})
           res.json({msg:"password update"})
